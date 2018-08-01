@@ -1,0 +1,15 @@
+{
+  "name": "web-helpers",
+  "version": "1.0.0",
+  "description": "some common web patterns",
+  "main": "index.js",
+  "repository": "https://github.com/Hiswe/web-helpers.git",
+  "author": "Hiswe <hiswehalya@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "toc": "doctoc README.md --github"
+  },
+  "devDependencies": {
+    "doctoc": "^1.3.1"
+  }
+}

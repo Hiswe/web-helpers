@@ -8,6 +8,7 @@ some common web patterns
 
 - [general](#general)
 - [mobile](#mobile)
+- [javascript](#javascript)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -67,4 +68,11 @@ some common web patterns
   button {
     touch-action: manipulation;
   }
+  ```
+
+## javascript
+
+- [native array unique](https://stackoverflow.com/questions/1960473/get-all-unique-values-in-a-javascript-array-remove-duplicates#14438954)
+  ```js
+  [...new Set(myArray)];
   ```

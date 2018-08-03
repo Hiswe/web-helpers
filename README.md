@@ -5,7 +5,6 @@ some common web patterns
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [general](#general)
 - [mobile](#mobile)
 - [javascript](#javascript)
@@ -30,6 +29,19 @@ some common web patterns
   select {
     font: inherit;
   }
+  ```
+- [responsive font-size](https://codepen.io/dannievinther/pen/GNExxb)
+  ```css
+  --min-font: 40;
+  --max-font: 80;
+  --fs-range-min: 420;
+  --fs-range-max: 1200;
+  font-size: calc(
+    (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) *
+      (
+        (100vw - var(--fs-range-min) * 1px) / (var(--fs-range-max) - var(--fs-range-min))
+      )
+  );
   ```
 - [accessible focus ring](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) (enabled by tabbing with a keyboard)
   ```scss

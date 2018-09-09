@@ -5,9 +5,20 @@ some common web patterns
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [general](#general)
+  - [box-sizing](#box-sizing)
+  - [accord native elements to website style](#accord-native-elements-to-website-style)
+  - [fluid font-size](#fluid-font-size)
+  - [font aliasing](#font-aliasing)
+  - [momentum scrolling](#momentum-scrolling)
+  - [accessible focus ring (enabled by tabbing with a keyboard)](#accessible-focus-ring-enabled-by-tabbing-with-a-keyboard)
 - [mobile](#mobile)
+  - [prevent font scaling while rotating iOS device while allowing user to zoom](#prevent-font-scaling-while-rotating-ios-device-while-allowing-user-to-zoom)
+  - [prevent zooming on double-tap](#prevent-zooming-on-double-tap)
 - [javascript](#javascript)
+  - [native array unique](#native-array-unique)
+  - [external promise creation](#external-promise-creation)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

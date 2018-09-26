@@ -6,14 +6,15 @@ some common web patterns
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [general](#general)
+- [CSS – general](#css-%C2%A0general)
+  - [native font-stack](#native-font-stack)
   - [box-sizing](#box-sizing)
   - [accord native elements to website style](#accord-native-elements-to-website-style)
-  - [fluid font-size](#fluid-font-size)
   - [font aliasing](#font-aliasing)
   - [momentum scrolling](#momentum-scrolling)
+- [CSS – with JS](#css--with-js)
   - [accessible focus ring (enabled by tabbing with a keyboard)](#accessible-focus-ring-enabled-by-tabbing-with-a-keyboard)
-- [mobile](#mobile)
+- [CSS – mobile](#css--mobile)
   - [prevent font scaling while rotating iOS device while allowing user to zoom](#prevent-font-scaling-while-rotating-ios-device-while-allowing-user-to-zoom)
   - [prevent zooming on double-tap](#prevent-zooming-on-double-tap)
 - [javascript](#javascript)
@@ -22,7 +23,21 @@ some common web patterns
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## general
+## CSS – general
+
+### native font-stack
+
+see:
+
+- [github system fonts](http://markdotto.com/2018/02/07/github-system-fonts/)
+- [CSS trick](https://css-tricks.com/snippets/css/system-font-stack/#article-header-id-1)
+
+```css
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+```
 
 ### box-sizing
 
@@ -46,7 +61,27 @@ select {
 }
 ```
 
-### [fluid font-size](https://css-tricks.com/snippets/css/fluid-typography/)
+### [font aliasing](https://stackoverflow.com/questions/11459746/webfont-smoothing-and-antialiasing-in-firefox-and-opera#17927764)
+
+```css
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+```
+
+### [momentum scrolling](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
+
+```css
+.module {
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+```
+
+## CSS – with JS
+
+<!-- ### [fluid font-size](https://css-tricks.com/snippets/css/fluid-typography/)
 
 ```scss
 @function strip-unit($value) {
@@ -74,25 +109,7 @@ select {
     }
   }
 }
-```
-
-### [font aliasing](https://stackoverflow.com/questions/11459746/webfont-smoothing-and-antialiasing-in-firefox-and-opera#17927764)
-
-```css
-.font-smoothing {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-```
-
-### [momentum scrolling](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
-
-```css
-.module {
-  overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
-}
-```
+``` -->
 
 ### [accessible focus ring](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) (enabled by tabbing with a keyboard)
 
@@ -119,7 +136,7 @@ function handleFirstTab(e) {
 window.addEventListener(`keydown`, handleFirstTab);
 ```
 
-## mobile
+## CSS – mobile
 
 ### prevent font scaling while rotating iOS device while allowing user to zoom
 

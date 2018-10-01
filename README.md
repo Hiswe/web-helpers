@@ -9,14 +9,14 @@ some common web patterns
 - [CSS – general](#css-%C2%A0general)
   - [native font-stack](#native-font-stack)
   - [box-sizing](#box-sizing)
+  - [mobile – prevent font scaling while rotating iOS device while allowing user to zoom](#mobile--prevent-font-scaling-while-rotating-ios-device-while-allowing-user-to-zoom)
+  - [mobile – prevent zooming on double-tap](#mobile--prevent-zooming-on-double-tap)
   - [accord native elements to website style](#accord-native-elements-to-website-style)
   - [font aliasing](#font-aliasing)
   - [momentum scrolling](#momentum-scrolling)
+  - [hidden and accessible](#hidden-and-accessible)
 - [CSS – with JS](#css--with-js)
   - [accessible focus ring (enabled by tabbing with a keyboard)](#accessible-focus-ring-enabled-by-tabbing-with-a-keyboard)
-- [CSS – mobile](#css--mobile)
-  - [prevent font scaling while rotating iOS device while allowing user to zoom](#prevent-font-scaling-while-rotating-ios-device-while-allowing-user-to-zoom)
-  - [prevent zooming on double-tap](#prevent-zooming-on-double-tap)
 - [javascript](#javascript)
   - [native array unique](#native-array-unique)
   - [external promise creation](#external-promise-creation)
@@ -49,6 +49,22 @@ html {
 }
 ```
 
+### mobile – prevent font scaling while rotating iOS device while allowing user to zoom
+
+```css
+html {
+  -webkit-text-size-adjust: 100%;
+}
+```
+
+### mobile – [prevent zooming on double-tap](https://stackoverflow.com/questions/46167604/iphone-html-disable-double-tap-to-zoom)
+
+```css
+button {
+  touch-action: manipulation;
+}
+```
+
 ### accord native elements to website style
 
 ```css
@@ -76,6 +92,21 @@ select {
 .module {
   overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
+}
+```
+
+### hidden and accessible
+
+```css
+.hidden-accessible {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
 }
 ```
 
@@ -134,24 +165,6 @@ function handleFirstTab(e) {
   }
 }
 window.addEventListener(`keydown`, handleFirstTab);
-```
-
-## CSS – mobile
-
-### prevent font scaling while rotating iOS device while allowing user to zoom
-
-```css
-html {
-  -webkit-text-size-adjust: 100%;
-}
-```
-
-### [prevent zooming on double-tap](https://stackoverflow.com/questions/46167604/iphone-html-disable-double-tap-to-zoom)
-
-```css
-button {
-  touch-action: manipulation;
-}
 ```
 
 ## javascript

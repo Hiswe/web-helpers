@@ -8,6 +8,7 @@ some common web patterns
 
 - [CSS – general](#css-%C2%A0general)
   - [native font-stack](#native-font-stack)
+  - [mono font-stack](#mono-font-stack)
   - [box-sizing](#box-sizing)
   - [mobile – prevent font scaling while rotating iOS device while allowing user to zoom](#mobile--prevent-font-scaling-while-rotating-ios-device-while-allowing-user-to-zoom)
   - [mobile – prevent zooming on double-tap](#mobile--prevent-zooming-on-double-tap)
@@ -36,6 +37,17 @@ see:
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+```
+
+### mono font-stack
+
+```css
+html {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
+    monospace;
 }
 ```
 
